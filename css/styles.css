@@ -1,0 +1,36 @@
+* {
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #9487F2;
+}
+
+.bell-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.bell {
+  fill: white;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+
+.title {
+  color: #FFF;
+}
+.main-title {
+  display: inline-block;
+}
+.main-img,
+.name {
+  display: inline;
+  float: right;
+}
