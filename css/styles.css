@@ -65,19 +65,18 @@
   padding: 5px 5px;
 }
 
-/************* GRID STYLES ***********/
+/************* GRID STYLES **************/
 
 .main-grid {
   display: grid;
   max-width: 100%;
-  grid-template-columns: 100px 1fr 1fr;
-  grid-template-rows: 150px repeat(5, 1fr);
+  grid-template-columns: 90px 1fr 1fr;
+  grid-template-rows: 90px repeat(5, 1fr);
 }
 
 .header {
   display: grid;
   background-color: #9487F2;
-  margin-bottom: 30px;
   grid-column: 1 / 4;
 }
 
@@ -86,7 +85,48 @@
 }
 
 .sidebar-nav {
-  display: grid;
-  background-color: #9487F2;
+  /* display: grid; */
+  background-color: #5B33CF;
   grid-column: 1 / 2;
+  grid-row: 2 / 7;
+}
+
+.main-traffic {
+  grid-column: 2 / 4;
+  background-color: red;
+}
+
+.daily-traffic {
+  background-color: green;
+  grid-column: 2 / 3;
+}
+
+.mobile-traffic {
+  background-color: yellow;
+  grid-column: 3 / 4;
+}
+
+.stats {
+  background-color: blue;
+  grid-column: 2 / 4;
+}
+
+.new-members {
+  background-color: purple;
+  grid-column: 2 / 3;
+}
+
+.activity {
+  background-color: grey;
+  grid-column: 3 / 4;
+}
+
+.message {
+  background-color: orange;
+  grid-column: 2 / 3;
+}
+
+.settings {
+  background-color: pink;
+  grid-column: 3 / 4;
 }
