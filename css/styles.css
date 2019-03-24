@@ -84,10 +84,10 @@
 }
 
 .alert {
-  background-color: #5840A0;
+  background-color: #6A72AF;
   padding: 15px;
   margin: 10px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #FFFFFF;
 }
 
@@ -108,8 +108,8 @@
 
 .header {
   display: grid;
-  background-color: #9487F2;
-  padding: 5px;
+  background-color: #7E87C7;
+  padding: 5px 5px;
   /* margin-bottom: 5px; */
 }
 
@@ -121,7 +121,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5B33CF;
+  background-color: #6D6CA0;
   grid-row: 2 / 3;
 }
 
@@ -223,13 +223,12 @@
   .member-icon,
   .visit-icon,
   .setting-icon {
-    height: 68px;
-    width: 68px;
+    height: 5rem;
+    width: 5rem;
   }
 
   .nav-icon {
-    margin: 10px;
-    padding: 15px;
+    padding: 15px 15px;
   }
 
   /************* GRID *************/
@@ -237,8 +236,8 @@
   .main-grid {
     /* display: grid;
     max-width: 100%; */
-    grid-template-columns: 90px 1fr 1fr;
-    grid-template-rows: 90px repeat(5, 1fr);
+    grid-template-columns: 80px 1fr 1fr;
+    grid-template-rows: 80px repeat(5, 1fr);
   }
 
   .header {

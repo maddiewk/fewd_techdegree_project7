@@ -41,7 +41,7 @@ var barChart = new Chart(trafficBarChart, {
       {
         data: [75, 100, 148, 109, 196, 189, 77],
         backgroundColor: [
-          '#5840A0', '#5840A0', '#5840A0', '#5840A0', '#5840A0', '#5840A0', '#5840A0'
+          '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF'
         ]
       }
     ]
@@ -49,6 +49,35 @@ var barChart = new Chart(trafficBarChart, {
   options: {
     legend: {
       display: false
+    }
+  }
+});
+
+// donut chart
+const donutChart = document.getElementById('donutChart');
+
+var pieChart = new Chart(donutChart, {
+  type: 'doughnut',
+  data: {
+    datasets: [{
+      data: [43, 27, 30],
+      backgroundColor: ['#7EC0C3', '#81CA84', '#6A72AF']
+    }],
+  labels: [
+    'Phones',
+    'Tablets',
+    'Desktop'
+    ]
+  },
+  options: {
+    legend: {
+      display: true,
+      labels: {
+        boxWidth: 20,
+        padding: 20,
+        fontSize: 20
+      },
+      position: 'right',
     }
   }
 });
