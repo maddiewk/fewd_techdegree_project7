@@ -227,8 +227,61 @@
     width: 5rem;
   }
 
+/* .twitter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6A72AF;
+  border: 2px solid red;
+} */
+
+  #tweet,
+  #face,
+  #google {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #6A72AF;
+    padding: 15px 15px;
+    overflow: visible;
+  }
+
+  #twitter,
+  #facebook,
+  #gplus {
+    color: #6A72AF;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 160px;
+    border: 1px solid #DADADA;
+    padding: 35px 0px 35px 35px;
+    background-color: #F1F1F1;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .numbers {
+    font-size: 40px;
+    margin: 0 auto;
+    color: #ADADAD;
+  }
+
   .nav-icon {
     padding: 15px 15px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
   }
 
   /************* GRID *************/
@@ -257,6 +310,7 @@
     grid-row: 2 / 7;
   }
 
+
   .main-traffic {
     grid-column: 2 / 4;
   }
@@ -269,8 +323,9 @@
     grid-column: 3 / 4;
   }
 
-  .stats {
+  .social {
     grid-column: 2 / 4;
+    margin: 0px 15px;
   }
 
   .new-members {

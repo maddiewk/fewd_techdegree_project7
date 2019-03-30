@@ -7,7 +7,7 @@ var lineChart = new Chart(trafficChart, {
     labels: ['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
     datasets: [
       {
-        // label: false,
+        lineTension: 0,
         data: [804, 1038, 1019, 1488, 929, 1371, 1426, 1578, 1532, 1215, 1493, 1516]
       }
     ]
@@ -25,6 +25,11 @@ var lineChart = new Chart(trafficChart, {
         right: 10,
         top: 10,
         bottom: 10
+      }
+    },
+    elements: {
+      line: {
+        tension: 0
       }
     }
   }
