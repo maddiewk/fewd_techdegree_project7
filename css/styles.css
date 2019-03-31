@@ -4,6 +4,7 @@
   font-family: "Merriweather", serif;
   box-sizing: border-box;
   font-size: 0.93rem;
+  margin: 0;
 }
 
 /************* HEADER STYLES ****************/
@@ -125,10 +126,6 @@
   padding: 0px 5px;
 }
 
-/* .social {
-  display: flex;
-} */
-
 #twitter,
 #facebook,
 #gplus {
@@ -161,6 +158,17 @@
   justify-content: space-around;
 }
 
+.main-traffic,
+.daily-traffic,
+.mobile-traffic,
+.social,
+.new-members,
+.activity,
+.message,
+.settings {
+  padding: 10px 10px;
+}
+
 /*************** MOBILE CHART STYLES *********************/
 
 .chart-container {
@@ -170,6 +178,21 @@
 .barChart-container {
   padding: 10px 10px 10px 30px;
   margin-right: 20px;
+}
+
+.daily-traffic {
+  border-top: 2px solid #E2E2E2;
+  border-bottom: 2px solid #E2E2E2;
+}
+
+.mobile-traffic {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #E2E2E2;
+}
+
+.new-members {
+  border-top: 2px solid #E2E2E2;;
+  border-bottom: 2px solid #E2E2E2;;
 }
 
 /****************** MOBILE MEMBER STYLES ******************/
@@ -210,6 +233,10 @@
   border-radius: 50%;
 }
 
+.break {
+  width: 44em;
+}
+
 /************ MEDIA QUERIES ****************/
 
 /* TABLET */
@@ -226,7 +253,7 @@
 
   /* TABLET GRID STYLES */
   .main-grid {
-    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr; */
     grid-template-rows: 100px 100px 1fr;
   }
 
@@ -269,6 +296,15 @@
 
   .settings {
     grid-column: 2 / 3;
+  }
+
+  .daily-traffic {
+    border-right: 1px solid #E2E2E2;
+  }
+
+  .mobile-traffic {
+    border-left: 2px solid #E2E2E2;
+    border-top: 2px solid #E2E2E2;
   }
 
 }
@@ -405,7 +441,6 @@
 
   .social {
     grid-column: 2 / 4;
-    margin: 0px 15px;
   }
 
   .new-members {
