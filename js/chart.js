@@ -22,16 +22,12 @@ var lineChart = new Chart(trafficChart, {
     layout: {
       padding: {
         left: 30,
-        right: 10,
+        right: 30,
         top: 10,
         bottom: 10
       }
     },
-    elements: {
-      line: {
-        tension: 0
-      }
-    }
+    maintainAspectRatio: false
   }
 });
 
@@ -44,7 +40,7 @@ var barChart = new Chart(trafficBarChart, {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets: [
       {
-        data: [75, 100, 148, 109, 196, 189, 77],
+        data: [75, 102, 198, 149, 246, 199, 167],
         backgroundColor: [
           '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF', '#6A72AF'
         ]
@@ -54,7 +50,8 @@ var barChart = new Chart(trafficBarChart, {
   options: {
     legend: {
       display: false
-    }
+    },
+    maintainAspectRatio: false
   }
 });
 
@@ -83,6 +80,7 @@ var pieChart = new Chart(donutChart, {
         fontSize: 20
       },
       position: 'right',
-    }
+    },
+    maintainAspectRatio: false
   }
 });

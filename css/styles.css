@@ -7,6 +7,7 @@
   margin: 0;
 }
 
+
 /************* HEADER STYLES ****************/
 
 #tm {
@@ -48,8 +49,8 @@
 /********** ICON STYLES **************/
 
 .bell-icon {
-  height: 2.3rem;
-  width: 2.3rem;
+  height: 2.3em;
+  width: 2.3em;
   transition: all 0.2s ease-in;
 }
 
@@ -63,8 +64,8 @@
 .member-icon,
 .visit-icon,
 .setting-icon {
-  height: 2.3rem;
-  width: 2.3rem;
+  height: 2.3em;
+  width: 2.3em;
 }
 
 .nav-icon:hover {
@@ -81,7 +82,7 @@
 
 #search {
   width: 50%;
-  height: 2.85rem;
+  height: 2.85em;
   margin: 5px 5px 0 0;
 }
 
@@ -107,7 +108,7 @@
 
 .main-grid {
   display: grid;
-  max-width: 100%;
+  width: 100%;
   grid-template-rows: 75px 75px 1fr;
 }
 
@@ -140,7 +141,6 @@
   border-radius: 50%;
   background-color: #6A72AF;
   padding: 10px 10px;
-  overflow: visible;
 }
 
 .card {
@@ -149,7 +149,7 @@
   width: 30%;
   height: 100px;
   border: 1px solid #DADADA;
-  padding: 15px;
+  padding: 5px;
   background-color: #F1F1F1;
 }
 
@@ -173,11 +173,15 @@
 
 .chart-container {
   margin-right: 20px;
+  height: 50vh;
+  width: 100vw;
 }
 
 .barChart-container {
   padding: 10px 10px 10px 30px;
   margin-right: 20px;
+  height: 50vh;
+  width: 100vw;
 }
 
 .daily-traffic {
@@ -317,6 +321,27 @@
     border-top: 2px solid #E2E2E2;
   }
 
+  /***** TABLET CHART STYLES *********/
+  .chart-container {
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+    /* padding: 0;
+    margin: 0; */
+  }
+
+  .barChart-container {
+    width: 50vw;
+    height: 40vh;
+    position: relative;
+  }
+
+  .donut-container {
+    width: 50vw;
+    height: 40vh;
+    position: relative;
+  }
+
 }
 
 /* DESKTOP VIEW */
@@ -409,22 +434,16 @@
     justify-content: space-between;
   }
 
-  /************* GRID *************/
+  /************* DESKTOP GRID STYLES *************/
 
-  .main-grid {
-    /* display: grid;
-    max-width: 100%; */
-    grid-template-columns: 80px 1fr 1fr;
-    grid-template-rows: 80px 1fr;
+   .main-grid {
+    grid-template-columns: 80px auto;
+    grid-template-rows: 80px auto;
   }
 
   .header {
     background-color: #9487F2;
     grid-column: 1 / 4;
-  }
-
-  .main-img {
-    grid-column: 4 / 5;
   }
 
   .sidebar-nav {
