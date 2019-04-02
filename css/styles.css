@@ -237,6 +237,16 @@
   width: 44em;
 }
 
+.arrow {
+  color: #A2A2A2;
+  font-size: 30px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 /************ MEDIA QUERIES ****************/
 
 /* TABLET */
