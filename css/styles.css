@@ -7,6 +7,11 @@
   margin: 0;
 }
 
+textarea {
+  resize: none;
+  /* width: 60%; */
+}
+
 
 /************* HEADER STYLES ****************/
 
@@ -267,6 +272,43 @@
   opacity: 0.6;
 }
 
+/******* MOBILE MESSAGE STYLES ***********/
+
+.message_user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#user_search {
+  width: 40em;
+  height: 3em;
+  border: 1px solid #CACACA;
+  background-color: #F5F5F5;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+#user_message {
+  width: 40em;
+  height: 10em;
+  border: 1px solid #CACACA;
+  background-color: #F5F5F5;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+#send_btn {
+  width: 40em;
+  height: 3em;
+  background-color: #6A72AF;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
 /*******************************************/
 /************ MEDIA QUERIES ****************/
 /*******************************************/
@@ -356,6 +398,7 @@
 /************ TABLET MEMBER STYLES ************/
 
 .break {
+  margin: auto;
   width: 95%;
 }
 
@@ -472,10 +515,14 @@
 
   .new-members {
     grid-column: 2 / 3;
+    border-right: 1px solid #E2E2E2;
   }
 
   .activity {
     grid-column: 3 / 4;
+    border-left: 1px solid #E2E2E2;
+    border-top: 2px solid #E2E2E2;
+    border-bottom: 2px solid #E2E2E2;
   }
 
   .message {
@@ -503,9 +550,30 @@
   }
 
   /************* DESKTOP MEMBERS STYLES *****************/
-.activity {
-  border-top: 2px solid #E2E2E2;
-  border-bottom: 2px solid #E2E2E2;
+  .break {
+    width: 35em;
+  }
+
+  /************** DESKTOP MESSAGE STYLES *****************/
+
+.message {
+  border-right: 2px solid #E2E2E2;;
 }
+
+  #user_search {
+    width: 40em;
+    height: 3em;
+  }
+
+  #user_message {
+    width: 40em;
+    height: 10em;
+  }
+
+  #send_btn {
+    width: 40em;
+    height: 3em;
+    margin: 20px 0 0 0;
+  }
 
 }
