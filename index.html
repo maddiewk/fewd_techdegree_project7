@@ -139,7 +139,7 @@
         <input type="text" name="search" id="search" placeholder="Search">
       </div>
       <div class="alert">
-        <span><strong>Alert! </strong>You have new notifications</span><span title="Close alert" id="close">X</span>
+        <span><strong>Alert! </strong>You have new notifications</span><span title="Close alert" id="alert_close" class="close">X</span>
       </div>
 
       <div class="chart-container">
@@ -334,10 +334,13 @@
     <div class="message">
       <p>MESSAGE USER</p>
       <form class="message_user" action="index.html" method="post">
-        <input id="user_search" type="text" placeholder="Search for User">
+        <input type="text" id="user_search" name="usersearch" placeholder="Search for User">
         <textarea id="user_message" placeholder="Message for User"></textarea>
         <input id="send_btn" type="submit" value="SEND">
       </form>
+      <div class="hidden">
+        <span>Your message was successfully sent!</span><span id="msg_close" class="close">X</span>
+      </div>
     </div>
 
     <div class="settings">

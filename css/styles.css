@@ -9,9 +9,26 @@
 
 textarea {
   resize: none;
-  /* width: 60%; */
 }
 
+input,
+textarea {
+  outline: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  background-color: #37B52A;
+  text-align: center;
+  width: 70%;
+  padding: 15px;
+  margin: auto;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
 
 /************* HEADER STYLES ****************/
 
@@ -78,7 +95,7 @@ textarea {
   opacity: 0.5;
 }
 
-/************** SEARCH BAR AND ALERT ******************/
+/************** INPUTS AND ALERT ******************/
 
 .search-bar {
   display: flex;
@@ -97,7 +114,19 @@ textarea {
   background-size: 18px 18px;
 }
 
-#close {
+#search,
+#user_search,
+#user_message {
+  transition: border 0.5s ease-out;
+}
+
+#search:focus,
+#user_search:focus,
+#user_message:focus {
+  border-bottom: 2px solid #6D6CA0;
+}
+
+.close {
   float: right;
 }
 
@@ -109,7 +138,7 @@ textarea {
   color: #FFFFFF;
 }
 
-#close:hover {
+.close:hover {
   cursor: pointer;
   color: #B2B2B2;
 }
@@ -278,6 +307,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 25px;
 }
 
 #user_search {
@@ -307,6 +337,11 @@ textarea {
   color: white;
   border-radius: 5px;
   padding: 15px;
+}
+
+#send_btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 /*******************************************/
