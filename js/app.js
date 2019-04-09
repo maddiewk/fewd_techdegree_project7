@@ -11,20 +11,24 @@ closeAlert.addEventListener('click', () =>{
 
 const send = document.getElementById('send_btn');
 const hiddenMessage = document.querySelector('.hidden');
+const errorMessage = document.querySelector('.hidden_two');
 const closeMsg = document.getElementById('msg_close');
 const search = document.getElementById('user_search');
 const message = document.getElementById('user_message');
 
 send.addEventListener('click', (e) => {
 
-  if (search.value == '' || message.value == '') {
-    console.log("NO");
+  if (search.value === '' || message.value === '') {
+    errorMessage.classList.remove('hidden_two');
+    errorMessage.classList.add('error_msg');
+    console.log("Please select a user.");
   } else {
-  // do this if form is filled out correctly
-  hiddenMessage.classList.remove('hidden');
-  hiddenMessage.classList.add('show');
-  e.preventDefault();
+    // do this if form is filled out correctly
+    hiddenMessage.classList.remove('hidden');
+    hiddenMessage.classList.add('show');
+    console.log("Great! You filled out all the required fields.");
   }
+  e.preventDefault();
 });
 
 closeMsg.addEventListener('click', () => {

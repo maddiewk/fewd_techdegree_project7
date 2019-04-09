@@ -16,7 +16,8 @@ textarea {
   outline: none;
 }
 
-.hidden {
+.hidden,
+.hidden_two {
   visibility: hidden;
 }
 
@@ -29,6 +30,17 @@ textarea {
   border-radius: 5px;
   color: #FFFFFF;
 }
+
+.error_msg {
+  background-color: #DF1818;
+  text-align: center;
+  width: 70%;
+  padding: 15px;
+  margin: auto;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
 
 /************* HEADER STYLES ****************/
 
