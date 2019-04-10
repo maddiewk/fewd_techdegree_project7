@@ -259,7 +259,6 @@ textarea {
 }
 
 .mobile-traffic {
-  /* padding-bottom: 15px; */
   border-bottom: 2px solid #E2E2E2;
 }
 
@@ -274,21 +273,23 @@ textarea {
 .new-members {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   border-top: 2px solid #E2E2E2;
   border-bottom: 2px solid #E2E2E2;
 }
 
 .card-members {
   display: flex;
+  width: 100%;
   padding: 10px;
-  margin: 1rem 0.4rem;
+  margin: 1em 0.4em;
 }
 
 .member-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 45px 10px 25px;
+  margin: 10px 25px;
 }
 
 .joined,
@@ -305,8 +306,8 @@ textarea {
 }
 
 .member-profile {
-  height: 65px;
-  width: 65px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
 }
 
@@ -324,7 +325,7 @@ textarea {
   opacity: 0.6;
 }
 
-/******* MOBILE MESSAGE STYLES ***********/
+/******* MOBILE STYLES ***********/
 
 .message_user {
   display: flex;
@@ -334,7 +335,7 @@ textarea {
 }
 
 #user_search {
-  width: 40em;
+  width: 100%;
   height: 3em;
   border: 1px solid #CACACA;
   background-color: #F5F5F5;
@@ -344,7 +345,7 @@ textarea {
 }
 
 #user_message {
-  width: 40em;
+  width: 100%;
   height: 10em;
   border: 1px solid #CACACA;
   background-color: #F5F5F5;
@@ -354,7 +355,7 @@ textarea {
 }
 
 #send_btn {
-  width: 40em;
+  width: 100%;
   height: 3em;
   background-color: #6A72AF;
   color: white;
@@ -403,13 +404,27 @@ select {
     text-overflow: '';
 }
 
+.save_settings {
+  display: flex;
+  justify-content: space-between;
+  margin: 33px 0;
+}
+
 #save_btn,
 #cancel_btn {
+  width: 15em;
   height: 3em;
-  background-color: #6A72AF;
   color: white;
   border-radius: 5px;
   padding: 15px;
+}
+
+#save_btn {
+  background-color: #6A72AF;
+}
+
+#cancel_btn {
+  background-color: #6A6A6A;
 }
 
 
