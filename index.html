@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/css-toggle-switch-master/dist/toggle-switch.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
   </head>
   <body>
@@ -347,7 +348,42 @@
     </div>
 
     <div class="settings">
-      <p id="sett">This is where the settings will go.</p>
+      <p>SETTINGS</p>
+      <div class="toggle">
+        <label class="switch-light switch-candy">
+            <input type="checkbox">
+            <strong>Send Email Notifications</strong>
+            <span class="light_switch">
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </div>
+        </label>
+        <div class="toggle">
+          <label class="switch-light switch-candy">
+            <input type="checkbox">
+            <strong>Set Profile to Public</strong>
+            <span class="light_switch">
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
+
+        <select id="timezone">
+          <option>Select Timezone</option>
+          <option value="eastern">Eastern Time (UTC-5)</option>
+          <option value="central">Central Time (UTC-6)</option>
+          <option value="mountain">Mountain Time (UTC-7)</option>
+          <option value="pacific">Pacific Time (UTC-8)</option>
+        </select>
+
+        <div class="save_settings">
+          <button type="button" id="save_btn">SAVE</button>
+          <button type="button" id="cancel_btn">CANCEL</button>
+        </div>
     </div>
 
   </div>

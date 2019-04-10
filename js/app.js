@@ -1,8 +1,4 @@
-// close the alert bar
-
-// const alertBar = document.querySelector('.alert');
-// const closeAlert = document.getElementById('alert_close');
-
+// Set up Globabl variables
 const $alertBar = $('.alert');
 const $closeAlert = $('#alert_close');
 const $send = $('#send_btn');
@@ -14,10 +10,12 @@ const $parentDiv = $('.message');
 const $appendDiv = $('#dynamic');
 const $errorMsgClose = $('#msg_close');
 
+// close the alert bar
 $closeAlert.on('click', () => {
   $alertBar.slideUp(800);
 });
 
+// handle submit
 $send.on('click', (e) => {
   e.preventDefault();
   $appendDiv.css('display', 'block');
