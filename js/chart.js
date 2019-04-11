@@ -19,14 +19,14 @@ var lineChart = new Chart(trafficChart, {
     legend: {
       display: false
       },
-    layout: {
-      padding: {
-        left: 30,
-        right: 30,
-        top: 10,
-        bottom: 10
-      }
-    },
+    // layout: {
+    //   padding: {
+    //     left: 30,
+    //     right: 30,
+    //     top: 10,
+    //     bottom: 10
+    //   }
+    // },
     maintainAspectRatio: false
   }
 });

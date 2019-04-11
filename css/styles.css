@@ -14,6 +14,7 @@ p {
 }
 
 #dashboard {
+  font-size: 20px;
   color: #737373;
 }
 
@@ -52,11 +53,15 @@ textarea {
 }
 
 
-/************* HEADER STYLES ****************/
+/************* MOBILE HEADER STYLES ****************/
 
 #tm {
   font-size: 0.5em;
   font-weight: 100;
+}
+
+.flex {
+  display: flex;
 }
 
 .dot {
@@ -65,36 +70,40 @@ textarea {
   width: 8px;
   background-color: #7FF360;
   display: inline-block;
-  margin-left: -7px;
-  margin-right: 5px;
-  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-left: -5px;
 }
 
 .profile-img {
-  width: 50px;
-  height: 55px;
+  width: 30px;
+  height: 35px;
   border-radius: 50%;
-  margin: 10px 10px 0px 5px;
+  visibility: hidden;
 }
 
 .title {
   color: #FFF;
+  font-size: 20px;
 }
 
-.main-img,
-.name {
-  display: inline-block;
+.main-img {
+  margin: 1em 0 0 2em;
 }
 
-.name {
+#my_name {
   color: #FFF;
+}
+
+.name {
+  font-size: 1em;
+  margin-top: 1em;
 }
 
 /********** ICON STYLES **************/
 
 .bell-icon {
-  height: 2.3em;
-  width: 2.3em;
+  height: 2em;
+  width: 2em;
   transition: all 0.2s ease-in;
 }
 
@@ -125,7 +134,7 @@ textarea {
 }
 
 #search {
-  width: 40%;
+  width: 50%;
   height: 2.85em;
   margin: 5px 5px 0 0;
   padding: 10px;
@@ -178,8 +187,7 @@ textarea {
 .header {
   display: flex;
   justify-content: space-between;
-  /* background-color: #7E87C7; */
-  background-color: #8387C8;
+  background-color: #7F7AB6;
   padding: 5px;
 }
 
@@ -212,17 +220,16 @@ textarea {
 .card {
   display: flex;
   justify-content: space-around;
-  width: 30%;
-  height: 100px;
+  width: 90%;
+  height: 80px;
   border: 1px solid #DADADA;
   padding: 15px;
   background-color: #F1F1F1;
+  margin: 0 auto;
 }
 
 .stats {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0px;
+  margin-top: 20px;
 }
 
 .main-traffic,
@@ -239,18 +246,18 @@ textarea {
 /*************** MOBILE CHART STYLES *********************/
 
 .chart-container {
-  height: 30vh;
+  height: 40vh;
   width: 90vw;
 }
 
 .barChart-container {
-  height: 30vh;
+  height: 40vh;
   width: 90vw;
 }
 
 .donut-container {
   width: 90vw;
-  height: 30vh;
+  height: 40vh;
 }
 
 .daily-traffic {
@@ -260,6 +267,10 @@ textarea {
 
 .mobile-traffic {
   border-bottom: 2px solid #E2E2E2;
+}
+
+.main-traffic {
+  margin: 30px 0;
 }
 
 #lines,
@@ -279,7 +290,6 @@ textarea {
 }
 
 .card-members {
-  display: flex;
   width: 100%;
   padding: 10px;
   margin: 1em 0.4em;
@@ -289,7 +299,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 25px;
+  margin: 20px 0;
 }
 
 .joined,
@@ -306,8 +316,8 @@ textarea {
 }
 
 .member-profile {
-  height: 45px;
-  width: 45px;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
 }
 
@@ -316,16 +326,10 @@ textarea {
 }
 
 .arrow {
-  color: #A2A2A2;
-  font-size: 30px;
+  visibility: hidden;
 }
 
-.arrow:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-/******* MOBILE STYLES ***********/
+/******* MOBILE MESSAGE STYLES ***********/
 
 .message_user {
   display: flex;
@@ -467,10 +471,10 @@ input:checked + .slider:after {
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 10px;
-    text-overflow: '';
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 10px;
+  text-overflow: '';
 }
 
 .save_settings {
@@ -496,7 +500,6 @@ select {
   background-color: #6A6A6A;
 }
 
-
 /*******************************************/
 /************ MEDIA QUERIES ****************/
 /*******************************************/
@@ -504,18 +507,46 @@ select {
 /* TABLET LAYOUT */
 @media (min-width: 768px) {
 
+/* TABLET HEADER STYLES */
+.main-title {
+  margin-left: 10px;
+}
+
+.profile-img {
+  width: 55px;
+  height: 60px;
+  margin: 5px 10px 0px 10px;
+  visibility: visible;
+}
+
+.name {
+  font-weight: lighter;
+  margin: 25px 10px 0 0;
+}
+
   /* TABLET ICON STYLES */
   .dashboard-icon,
   .member-icon,
   .visit-icon,
   .setting-icon {
-    height: 3rem;
-    width: 3rem;
+    height: 3em;
+    width: 3em;
+  }
+
+  .bell-icon {
+    width: 3em;
+    height: 3em;
+  }
+
+  .dot {
+    width: 0.7em;
+    height: 0.7em;
+    margin: 5 0 30px -10px;
   }
 
   /* TABLET GRID STYLES */
   .main-grid {
-    grid-template-rows: 90px 90px auto;
+    grid-template-rows: 75px 75px auto;
     grid-template-columns: 50% 50%;
   }
 
@@ -530,6 +561,7 @@ select {
   .main-traffic {
     grid-column: 1 / 3;
     padding: 20px;
+    margin: 30px 0 30px 0;
   }
 
   .daily-traffic {
@@ -562,10 +594,6 @@ select {
     grid-column: 1 / 3;
   }
 
-  /* .main-traffic {
-    margin-bottom: 20px;
-  } */
-
 
   /***** TABLET CHART STYLES *********/
   .chart-container {
@@ -590,16 +618,85 @@ select {
   width: 95%;
 }
 
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
 }
 
-/* DESKTOP LAYOUT */
+.card {
+  width: 30%;
+  height: 100px;
+}
+
+.card-members {
+  display: flex;
+}
+
+.member-info {
+  margin-left: 15px;
+}
+
+.arrow {
+  color: #A2A2A2;
+  font-size: 30px;
+  visibility: visible;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/********** TABLET MESSAGE STYLES **********/
+
+#user_search,
+#user_message,
+#send_btn {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message_user {
+  margin-top: 20px;
+}
+
+/********* TABLET SETTINGS STYLES **********/
+
+.timezone_select {
+  width: 50%;
+  margin: auto;
+}
+
+.save_settings {
+  justify-content: space-around;
+}
+
+.toggle-switch {
+  width: 75%;
+  margin: auto;
+  padding: 15px;
+}
+
+}
+
+/*************************************************
+/*************** DESKTOP LAYOUT ******************
+/*************************************************/
+
 @media (min-width: 1024px) {
   .dot {
-    height: 6px;
-    width: 6px;
+    height: 0.9em;
+    width: 0.9em;
     display: inline-block;
     margin-left: -15px;
     margin-bottom: 30px;
+  }
+
+  .dsk_break {
+    margin-left: 10px;
+    border: 0.5px solid #6F6A9B;
   }
 
   /******** ICON STYLES **********/
@@ -663,8 +760,8 @@ select {
   /************* DESKTOP GRID STYLES *************/
 
    .main-grid {
-    grid-template-columns: auto 1fr 1fr;
-    grid-template-rows: auto 1fr 0.5fr 0.5fr 1fr 0.5fr;
+    grid-template-columns: 80px 1fr 1fr;
+    grid-template-rows: 80px 0.5fr 0.5fr 0.5fr 1fr;
   }
 
   .header {
@@ -683,6 +780,9 @@ select {
 
   .main-traffic {
     grid-column: 2 / 4;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .daily-traffic {
@@ -726,18 +826,27 @@ select {
   }
 
   .barChart-container {
-    width: 39vw;
+    width: 40vw;
     height: 40vh;
   }
 
   .donut-container {
-    width: 39vw;
+    width: 40vw;
     height: 40vh;
   }
 
   /************* DESKTOP MEMBERS STYLES *****************/
   .break {
     width: 35em;
+  }
+
+  .card {
+    width: 32%;
+  }
+
+  .arrow {
+    margin-right: 10px;
+    font-size: 20px;
   }
 
   /************** DESKTOP MESSAGE STYLES *****************/
@@ -760,6 +869,28 @@ select {
     width: 40em;
     height: 3em;
     margin: 20px 0 0 0;
+  }
+
+  /************** DESKTOP SETTINGS STYLES *****************/
+
+  .toggle-switch {
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .timezone_select {
+    width: 100%;
+  }
+
+  .timezone_select {
+    margin-top: 0.45em;
+  }
+
+  #user_message,
+  .timezone_select {
+    margin-bottom: 4em;
   }
 
 }
