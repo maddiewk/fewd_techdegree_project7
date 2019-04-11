@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/css-toggle-switch-master/dist/toggle-switch.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
   </head>
   <body>
@@ -349,28 +348,21 @@
 
     <div class="settings">
       <p>SETTINGS</p>
-      <div class="toggle">
-        <label class="switch-light switch-candy">
-            <input type="checkbox">
-            <strong>Send Email Notifications</strong>
-            <span class="light_switch">
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
+      <div class="toggle-switch">
+        <p>Send Email Notifications</p>
+        <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
         </label>
       </div>
-        <div class="toggle">
-          <label class="switch-light switch-candy">
-            <input type="checkbox">
-            <strong>Set Profile to Public</strong>
-            <span class="light_switch">
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
-        </div>
+
+      <div class="toggle-switch">
+        <p>Set Profile to Public</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
 
         <select id="timezone">
           <option>Select Timezone</option>
