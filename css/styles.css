@@ -187,7 +187,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   background-color: #7477C8;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .sidebar-nav {
@@ -195,7 +195,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   background-color: #6D6CA0;
-  padding: 0px 5px;
+  padding: 0px 10px;
 }
 
 #twitter,
@@ -207,12 +207,11 @@ textarea {
 #tweet,
 #face,
 #google {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   background-color: #6A72AF;
-  padding: 10px;
-  margin-right: 5px;
+  padding: 12px;
   overflow: visible;
 }
 
@@ -227,19 +226,12 @@ textarea {
   margin: 0 auto;
 }
 
-.stats {
-  margin-top: 20px;
+.social {
+  padding: 10px;
 }
 
-.main-traffic,
-.daily-traffic,
-.mobile-traffic,
-.social,
-.new-members,
-.activity,
-.message,
-.settings {
-  padding: 15px;
+.stats {
+  margin-top: 20px;
 }
 
 /*************** MOBILE CHART STYLES *********************/
@@ -251,7 +243,7 @@ textarea {
 }
 
 .chart-container {
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .barChart-container {
@@ -267,14 +259,17 @@ textarea {
 .daily-traffic {
   border-top: 2px solid #E2E2E2;
   border-bottom: 2px solid #E2E2E2;
+  padding: 10px;
 }
 
 .mobile-traffic {
   border-bottom: 2px solid #E2E2E2;
+  padding: 10px;
 }
 
 .main-traffic {
-  margin: 20px 0;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 #lines,
@@ -292,7 +287,7 @@ textarea {
 }
 
 .chart_view li {
-  padding: 8px 15px;
+  padding: 6px 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -317,11 +312,13 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 10px;
   border-top: 2px solid #E2E2E2;
   border-bottom: 2px solid #E2E2E2;
 }
 
 .card-members {
+  display: flex;
   width: 100%;
   padding: 5px;
   margin: 1em 0.4em;
@@ -331,7 +328,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 .joined,
@@ -342,9 +339,14 @@ textarea {
 .email {
   color: #6A72AF;
 }
+
 .email:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+.activity {
+  padding: 10px;
 }
 
 .member-profile {
@@ -362,6 +364,10 @@ textarea {
 }
 
 /******* MOBILE MESSAGE STYLES ***********/
+
+.message {
+  padding: 10px;
+}
 
 .message_user {
   display: flex;
@@ -489,6 +495,11 @@ input:checked + .slider:after {
 
 
 /*************** MOBILE SETTINGS ******************/
+
+.settings {
+  padding: 10px;
+}
+
 #timezone {
   height: 3em;
   width: 100%;
@@ -550,18 +561,10 @@ select {
 @media (min-width: 768px) {
 
 /* TABLET HEADER STYLES */
-.main-title {
-  margin-left: 10px;
-}
-
-.main-img {
-  /* display: flex; */
-}
-
 .profile-img {
   width: 50px;
   height: 50px;
-  /* margin: 5px 10px 0px 10px; */
+  margin: 5px 10px 0px 10px;
   vertical-align: middle;
   visibility: visible;
 }
@@ -569,7 +572,6 @@ select {
 .name {
   display: flex;
   font-weight: lighter;
-  /* margin: 25px 10px 0 0; */
 }
 
 #dashboard {
@@ -577,12 +579,21 @@ select {
 }
 
 #search {
-  width: 50%;
+  width: 70%;
+}
+
+.dashboard_1 {
+  display: flex;
+  justify-content: space-around;
+  margin-right: auto;
 }
 
 .search-bar {
-  margin-left: 15em;
-  display: inline;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 10px 0;
 }
 
   /* TABLET ICON STYLES */
@@ -622,17 +633,17 @@ select {
   .main-traffic {
     grid-column: 1 / 3;
     margin: 0;
-    padding: 0;
+    padding: 5px;
   }
 
   .daily-traffic {
     grid-column: 1 / 3;
-    padding: 20px;
+    padding: 5px;
   }
 
   .mobile-traffic {
     grid-column: 1 / 3;
-    padding: 20px;
+    padding: 5px;
   }
 
   .social {
@@ -690,14 +701,6 @@ select {
   height: 100px;
 }
 
-.card-members {
-  display: flex;
-}
-
-.member-info {
-  margin-left: 15px;
-}
-
 .arrow {
   color: #A2A2A2;
   font-size: 30px;
@@ -747,63 +750,49 @@ select {
 /*************************************************/
 
 @media (min-width: 1024px) {
-  .notifications {
+  /* .notifications {
     margin-left: auto;
     width: 130px;
     z-index: 1;
-  }
+  } */
 
   .profile-img {
     width: 50px;
     height: 50px;
-    margin: 0 10px;
   }
 
   .dot {
-    height: 0.8em;
-    width: 0.8em;
-    position: relative;
-    margin-bottom: 10px;
+    height: 10px;
+    width: 10px;
+    margin-bottom: 26px;
   }
 
   .name {
     border-left: 1px solid #6568BF;
   }
 
-  .dashboard_1 {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 15px;
-    margin-right: auto;
-  }
-
 .search-bar {
   background-color: #FBFBFB;
   border-left: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
-  height: 10%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 0 10px 0;
-
+  margin-left: 10px;
 }
 
   #search {
     width: 30%;
   }
 
-  /******** ICON STYLES **********/
+  /******** DESKTOP ICON STYLES **********/
 
   .main-img {
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
   }
   .bell-icon {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
   }
 
@@ -828,10 +817,10 @@ select {
   .card {
     display: flex;
     justify-content: space-between;
-    width: 400px;
-    height: 160px;
+    width: 30%;
+    height: 150px;
     border: 1px solid #DADADA;
-    padding: 35px;
+    padding: 20px;
     background-color: #F1F1F1;
   }
 
@@ -851,11 +840,6 @@ select {
   .nav-icon {
     padding: 15px;
     margin-bottom: 15px;
-  }
-
-  .stats {
-    display: flex;
-    justify-content: space-between;
   }
 
   /************* DESKTOP GRID STYLES *************/
@@ -919,29 +903,25 @@ select {
 
   /***** DESKTOP CHART STYLES *******/
   .line-chart {
-    width: 90vw;
+    width: 85vw;
     height: 50vh;
-    margin: 10px 0 50px 30px;
-    padding: 20px 40px;
+    /* margin: 10px 0 50px 30px;
+    padding: 20px 40px; */
   }
 
   .barChart-container {
-    width: 40vw;
+    width: 30vw;
     height: 40vh;
   }
 
   .donut-container {
-    width: 40vw;
+    width: 30vw;
     height: 40vh;
   }
 
   /************* DESKTOP MEMBERS STYLES *****************/
   .break {
-    width: 35em;
-  }
-
-  .card {
-    width: 32%;
+    width: 20em;
   }
 
   .arrow {
@@ -956,17 +936,17 @@ select {
 }
 
   #user_search {
-    width: 40em;
+    width: 100%;
     height: 3em;
   }
 
   #user_message {
-    width: 40em;
+    width: 100%;
     height: 10em;
   }
 
   #send_btn {
-    width: 40em;
+    width: 100%;
     height: 3em;
     margin: 20px 0 0 0;
   }
