@@ -75,9 +75,9 @@ var pieChart = new Chart(donutChart, {
     legend: {
       display: true,
       labels: {
-        boxWidth: 20,
-        padding: 20,
-        fontSize: 20
+        boxWidth: 15,
+        // padding: 20,
+        fontSize: 15
       },
       position: 'right',
     },

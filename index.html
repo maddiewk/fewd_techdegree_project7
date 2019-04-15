@@ -15,7 +15,7 @@
           <h1 class="title">YourApp<span id="tm">&#8482;</span></h1>
         </div>
         <div class="main-img">
-          <img src="icons/icon-bell.svg" alt="Bell Icon">
+          <img class="bell-icon" src="icons/icon-bell.svg" alt="Bell Icon">
           <span class="dot"></span>
         </div>
         <!-- <div class="notifications">
@@ -136,7 +136,15 @@
 
       <div class="chart-container">
         <p id="lines">TRAFFIC</p>
-        <canvas id="trafficLineChart"></canvas>
+        <ul class="chart_view">
+          <li>Hourly</li>
+          <li>Daily</li>
+          <li class="active">Weekly</li>
+          <li>Monthly</li>
+        </ul>
+        <div class="line-chart">
+          <canvas id="trafficLineChart"></canvas>
+        </div>
       </div>
 
     </div>
