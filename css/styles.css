@@ -3,14 +3,12 @@
 * {
   font-family: "Merriweather", serif;
   box-sizing: border-box;
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   margin: 0;
 }
 
 p {
   color: #737373;
-  font-size: 1rem;
-  font-weight: bolder;
 }
 
 #dashboard {
@@ -242,10 +240,6 @@ textarea {
   margin-top: 2em;
 }
 
-.chart-container {
-  /* padding: 15px; */
-}
-
 .barChart-container {
   height: 40vh;
   width: 90vw;
@@ -357,6 +351,7 @@ textarea {
 
 .break {
   width: 90%;
+  margin: 0 auto;
 }
 
 .arrow {
@@ -402,7 +397,6 @@ textarea {
   background-color: #6A72AF;
   color: white;
   border-radius: 5px;
-  padding: 15px;
 }
 
 #send_btn:hover {
@@ -527,7 +521,7 @@ select {
 .save_settings {
   display: flex;
   justify-content: space-between;
-  margin: 33px 0;
+  margin: 15px 0;
 }
 
 #save_btn,
@@ -536,7 +530,6 @@ select {
   height: 3em;
   color: white;
   border-radius: 5px;
-  padding: 15px;
 }
 
 #save_btn {
@@ -666,7 +659,6 @@ select {
     grid-column: 1 / 3;
   }
 
-
   /***** TABLET CHART STYLES *********/
   .line-chart {
     width: 95vw;
@@ -685,8 +677,25 @@ select {
 
 /************ TABLET MEMBER STYLES ************/
 
+.member-info {
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.member-info_activity {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 10px;
+}
+
 .break {
-  margin: auto;
   width: 95%;
 }
 
@@ -902,31 +911,47 @@ select {
   }
 
   /***** DESKTOP CHART STYLES *******/
+
+  .chart_view li {
+    margin: 0;
+  }
+
   .line-chart {
     width: 85vw;
     height: 50vh;
-    /* margin: 10px 0 50px 30px;
-    padding: 20px 40px; */
+    margin: 0 auto;
   }
 
   .barChart-container {
     width: 30vw;
     height: 40vh;
+    margin: 0 auto;
   }
 
   .donut-container {
     width: 30vw;
     height: 40vh;
+    margin: 0 auto;
   }
 
   /************* DESKTOP MEMBERS STYLES *****************/
-  .break {
-    width: 20em;
+
+  .member-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+
+  .date {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .arrow {
-    margin-right: 10px;
-    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+    font-size: 24px;
   }
 
   /************** DESKTOP MESSAGE STYLES *****************/
@@ -943,18 +968,19 @@ select {
   #user_message {
     width: 100%;
     height: 10em;
+    margin-bottom: auto;
   }
 
   #send_btn {
     width: 100%;
     height: 3em;
-    margin: 20px 0 0 0;
+    margin: 35px 0 0 0;
   }
 
   /************** DESKTOP SETTINGS STYLES *****************/
 
   .toggle-switch {
-    margin-top: 20px;
+    margin-top: 18px;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -964,13 +990,8 @@ select {
     width: 100%;
   }
 
-  .timezone_select {
-    margin-top: 0.45em;
-  }
-
-  #user_message,
-  .timezone_select {
-    margin-bottom: 4em;
+  .save_settings {
+    margin-bottom: auto;
   }
 
 }
