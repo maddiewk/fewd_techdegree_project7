@@ -419,7 +419,7 @@ input[type='checkbox'] {
 .switch {
   position: relative;
   display: inline-block;
-  width: 75px;
+  width: 70px;
   height: 34px;
 }
 
@@ -492,6 +492,8 @@ input:checked + .slider:after {
 
 .settings {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #timezone {
@@ -724,9 +726,14 @@ select {
 /********** TABLET MESSAGE STYLES **********/
 
 #user_search,
-#user_message,
+#user_message {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #send_btn {
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -982,41 +989,38 @@ select {
   /************** DESKTOP MESSAGE STYLES *****************/
 
 .message {
-  border-right: 2px solid #E2E2E2;;
+  border-right: 2px solid #E2E2E2;
 }
 
   #user_search {
     width: 100%;
-    height: 3em;
+    margin-bottom: 40px;
   }
 
   #user_message {
     width: 100%;
     height: 10em;
-    margin-bottom: auto;
   }
 
   #send_btn {
     width: 100%;
-    height: 3em;
-    margin: 35px 0 0 0;
+    margin: 65px 0 0 0;
   }
 
   /************** DESKTOP SETTINGS STYLES *****************/
 
   .toggle-switch {
-    margin-top: 18px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
+    margin: 20px 0 10px 0;
   }
 
   .timezone_select {
     width: 100%;
+    margin: 5px 0 42px 0;
   }
 
-  .save_settings {
-    margin-bottom: auto;
+  #save_btn,
+  #cancel_btn {
+    width: 45%;
   }
 
 }

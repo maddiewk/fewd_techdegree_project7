@@ -47,3 +47,12 @@ $bellIcon.on('click', () => {
 $closeNotifications.on('click', () => {
   $notificationBox.css('display', 'none');
 });
+
+const users = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
+
+$search.on('keyup', () => {
+  let input = $search.val().toLowerCase();
+  for (let i = 0; i < users.length; i++) {
+    console.log(users[i]);
+  }
+});
