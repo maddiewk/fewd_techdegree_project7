@@ -9,13 +9,17 @@ const $message = $('#user_message');
 const $parentDiv = $('.message');
 const $appendDiv = $('#dynamic');
 const $errorMsgClose = $('#msg_close');
+const $bellIcon = $('.main-img');
+const $notificationBox = $('.notifications');
+const $newNotifications = $('.dot');
+const $closeNotifications = $('.close-notification');
 
 // close the alert bar
 $closeAlert.on('click', () => {
   $alertBar.slideUp(800);
 });
 
-// handle submit
+// handle submit button
 $send.on('click', (e) => {
   e.preventDefault();
   $appendDiv.css('display', 'block');
@@ -32,4 +36,14 @@ $send.on('click', (e) => {
 
 $errorMsgClose.on('click', () => {
   $hiddenMessage.addClass('hidden').removeClass('show');
+});
+
+// handle notification box dropdown
+$bellIcon.on('click', () => {
+  $notificationBox.css('display', 'block');
+  $newNotifications.css('display', 'none');
+});
+
+$closeNotifications.on('click', () => {
+  $notificationBox.css('display', 'none');
 });

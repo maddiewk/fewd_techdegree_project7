@@ -759,11 +759,36 @@ select {
 /*************************************************/
 
 @media (min-width: 1024px) {
-  /* .notifications {
-    margin-left: auto;
-    width: 130px;
-    z-index: 1;
-  } */
+  .notifications {
+    top: 55px;
+    right: 220px;
+    z-index: 2;
+    position: absolute;
+    display: none;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    height: 85px;
+    width: 180px;
+    border: 1px solid #D7D8FB;
+    background-color: #FBFBFB;
+  }
+
+  .close-notification {
+    padding: 10px;
+    background-color: #7477C8;
+    color: #FFF;
+    border-radius: 10px;
+  }
+
+  .close-notification:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 
   .profile-img {
     width: 50px;
