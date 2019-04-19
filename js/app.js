@@ -13,10 +13,11 @@ const $bellIcon = $('.main-img');
 const $notificationBox = $('.notifications');
 const $newNotifications = $('.dot');
 const $closeNotifications = $('.close-notification');
+const $auto = $('.autocomplete');
 
 // close the alert bar
 $closeAlert.on('click', () => {
-  $alertBar.slideUp(800);
+  $alertBar.slideUp(700);
 });
 
 // handle submit button
@@ -48,11 +49,52 @@ $closeNotifications.on('click', () => {
   $notificationBox.css('display', 'none');
 });
 
+
+// test autocomplete function here
+
 const users = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
 $search.on('keyup', () => {
-  let input = $search.val().toLowerCase();
-  for (let i = 0; i < users.length; i++) {
-    console.log(users[i]);
-  }
+  // test to see if input matches any of the data in array (use for loop)
+  // if it matches display in autcomplete 'div'
+
+  let userInput = $search.val();
+  users.forEach(function(el) {
+    let splint = el.split('');
+    // console.log(split);
+    if (splint.indexOf(userInput) > -1) {
+      console.log("Yes");
+    } else {
+      console.log("No");
+    }
+  })
 });
+
+
+// function autocomplete (inp, arr) {
+//   let currentUser;
+//   search.addEventListener('keydown', (e) => {
+//     let a, b, i, val = this.value;
+//     if (!val) {
+//       return false;
+//     }
+//     currentUser = -1;
+//     a = document.createElement('div');
+//     a.setAttribute('class', 'autocomplete-list');
+//     this.parentNode.appendChild(a);
+//     for (i = 0; i < arr.length; i++) {
+//       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+//         b = document.createElement('div');
+//         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+//         b.innerHTML += arr[i].substr(val.length);
+//         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+//           b.addEventListener('click', function(e) {
+//             inp.value = this.getElementsByTagName('input'[0].value);
+//           });
+//           a.appendChild(b);
+//       }
+//     }
+//   });
+// }
+//
+// autocomplete(search, users);

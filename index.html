@@ -341,8 +341,11 @@
 
     <div class="message">
       <p>MESSAGE USER</p>
-      <form class="message_user" action="index.html" method="post">
+      <form class="message_user" autocomplete="off" action="index.html" method="post">
+        <div class="autocomplete">
           <input type="text" id="user_search" name="usersearch" placeholder="Search for User">
+        </div>
+        
           <textarea id="user_message" placeholder="Message for User"></textarea>
           <input id="send_btn" type="submit" value="SEND">
       </form>
