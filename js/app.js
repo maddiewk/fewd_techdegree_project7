@@ -50,51 +50,95 @@ $closeNotifications.on('click', () => {
 });
 
 
-// test autocomplete function here
-
+// autocomplete function
+// array of users
 const users = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
-$search.on('keyup', () => {
-  // test to see if input matches any of the data in array (use for loop)
-  // if it matches display in autcomplete 'div'
-
-  let userInput = $search.val();
-  users.forEach(function(el) {
-    let splint = el.split('');
-    // console.log(split);
-    if (splint.indexOf(userInput) > -1) {
-      console.log("Yes");
-    } else {
-      console.log("No");
+function auto(input, arr) {
+  let currentInput;
+  // add and remove active status for user autocomplete list based on key up or down
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentInput >= x.length) {
+      currentInput = 0;
     }
-  })
-});
+    if (currentInput < 0) {
+      currentInput = (x.length - 1);
+    }
+      x[currentInput].classList.add('active');
+    }
+    function removeActive(x) {
+      for (let i = 0; i < x.length; i++) {
+        x[i].classList.remove('active');
+      }
+    }
+// listen for user input on search bar
+  input.addEventListener('input', function(e) {
+    let val = this.value;
+    if (!val) {
+      return false;
+    }
+    currentInput = -1;
 
+    let autoItem = document.createElement('div');
+    autoItem.setAttribute('id', this.id + 'auto-list');
+    autoItem.setAttribute('class', 'autocomplete-list list');
+    this.parentNode.appendChild(autoItem);
+    for (let i = 0; i < arr.length; i++) {
+      let match = arr[i].toUpperCase();
+      if (match.includes(val.toUpperCase())) {
+        let matchItem = document.createElement('div');
+        matchItem.setAttribute('class', 'list');
+        matchItem.innerHTML += "<input value='" + arr[i] + "'>";
+        matchItem.addEventListener('click', function(e) {
+          input.value = this.getElementsByTagName('input')[0].value;
+          close();
+        });
+          autoItem.appendChild(matchItem);
+        }
+      }
+  });
+  // listen for key press
+  input.addEventListener('keydown', function(e) {
+    let x = document.getElementById(this.id + 'auto-list');
+    if (x) {
+      x = x.getElementsByTagName('div');
+      if (e.keyCode == 40) {
+        currentInput++;
+        addActive(x);
+      } else if (e.keyCode == 38) {
+        currentInput--;
+        addActive(x);
+      } else if (e.keyCode == 8 && input.value == '') {
+        // currentInput--;
+        console.log("You hit backspace.");
+        const allAutoDivs = document.getElementsByClassName('list');
+        for (let i = 0; i < allAutoDivs.length; i++) {
+          this.parentNode.removeChild(allAutoDivs[i]);
+        }
+      }  else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentInput > -1) {
+          if (x) {
+            x[currentInput].click();
+          }
+        }
+      }
+    }
 
-// function autocomplete (inp, arr) {
-//   let currentUser;
-//   search.addEventListener('keydown', (e) => {
-//     let a, b, i, val = this.value;
-//     if (!val) {
-//       return false;
-//     }
-//     currentUser = -1;
-//     a = document.createElement('div');
-//     a.setAttribute('class', 'autocomplete-list');
-//     this.parentNode.appendChild(a);
-//     for (i = 0; i < arr.length; i++) {
-//       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-//         b = document.createElement('div');
-//         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-//         b.innerHTML += arr[i].substr(val.length);
-//         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-//           b.addEventListener('click', function(e) {
-//             inp.value = this.getElementsByTagName('input'[0].value);
-//           });
-//           a.appendChild(b);
-//       }
-//     }
-//   });
-// }
-//
-// autocomplete(search, users);
+  });
+    function close(element) {
+      let x = document.getElementsByClassName('autocomplete-list');
+      for (let i = 0; i < x.length; i++) {
+        if (element !=x[i] && element!= input) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    document.addEventListener('click', function(e) {
+      close(e.target);
+    });
+  }
+
+auto(document.getElementById('user_search'), users);
