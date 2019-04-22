@@ -403,6 +403,39 @@ textarea {
   opacity: 0.8;
 }
 
+.autocomplete {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-list {
+  position: absolute;
+  margin-top: -40px;
+  width: inherit;
+  border: 1px solid #d4d4d4;
+  z-index: 50;
+  top: 90px;
+  left: 0;
+  right: 0;
+}
+
+.list input {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #d4d4d4;
+  background-color: #F5F5F5;
+}
+
+.list .active input {
+  background-color: #e9e9e9;
+
+}
+
+.list input:hover {
+  background-color: #e9e9e9;
+}
+
 /*************** MOBILE TOGGLE SWITCH ***************/
 
 .toggle-switch {
@@ -724,13 +757,6 @@ select {
 
 /********** TABLET MESSAGE STYLES **********/
 
-#user_search,
-#user_message {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #send_btn {
   width: 50%;
   margin-left: auto;
@@ -989,46 +1015,6 @@ select {
 
 .message {
   border-right: 2px solid #E2E2E2;
-
-}
-
-.autocomplete {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-}
-
-/* #auto-list {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-} */
-
-.autocomplete-list {
-  position: absolute;
-  margin-top: -40px;
-  width: inherit;
-  border: 1px solid #d4d4d4;
-  z-index: 50;
-  top: 90px;
-  left: 0;
-  right: 0;
-}
-
-.list input {
-  padding: 10px;
-  cursor: pointer;
-  border-bottom: 1px solid #d4d4d4;
-  background-color: #F5F5F5;
-}
-
-.list .active input {
-  background-color: #e9e9e9;
-
-}
-
-.list input:hover {
-  background-color: #e9e9e9;
 }
 
   #user_search {

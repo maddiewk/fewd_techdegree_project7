@@ -76,6 +76,7 @@ function auto(input, arr) {
 // listen for user input on search bar
   input.addEventListener('input', function(e) {
     let val = this.value;
+    close();
     if (!val) {
       return false;
     }
@@ -102,6 +103,13 @@ function auto(input, arr) {
   // listen for key press
   input.addEventListener('keydown', function(e) {
     let x = document.getElementById(this.id + 'auto-list');
+    if ($search.val() == '') {
+      // currentInput--;
+      const allAutoDivs = $('.list');
+      allAutoDivs.each(function() {
+        $(this).remove();
+      });
+    }
     if (x) {
       x = x.getElementsByTagName('div');
       if (e.keyCode == 40) {
@@ -110,14 +118,8 @@ function auto(input, arr) {
       } else if (e.keyCode == 38) {
         currentInput--;
         addActive(x);
-      } else if (e.keyCode == 8 && input.value == '') {
-        // currentInput--;
-        console.log("You hit backspace.");
-        const allAutoDivs = document.getElementsByClassName('list');
-        for (let i = 0; i < allAutoDivs.length; i++) {
-          this.parentNode.removeChild(allAutoDivs[i]);
-        }
-      }  else if (e.keyCode == 13) {
+      }
+        else if (e.keyCode == 13) {
         e.preventDefault();
         if (currentInput > -1) {
           if (x) {
