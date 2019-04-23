@@ -70,6 +70,37 @@ textarea {
   margin-left: -10px;
 }
 
+.notifications {
+  top: 55px;
+  right: 310px;
+  z-index: 2;
+  position: absolute;
+  display: none;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  height: 85px;
+  width: 180px;
+  border: 1px solid #D7D8FB;
+  background-color: #FBFBFB;
+}
+
+.close-notification {
+  padding: 10px;
+  background-color: #7477C8;
+  color: #FFF;
+  border-radius: 10px;
+}
+
+.close-notification:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .profile-img {
   width: 30px;
   height: 35px;
@@ -546,8 +577,6 @@ input:checked + .slider:after {
 }
 
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   text-indent: 10px;
   text-overflow: '';
 }
@@ -588,6 +617,11 @@ select {
 @media (min-width: 768px) {
 
 /* TABLET HEADER STYLES */
+
+.notifications {
+  right: 430px;
+}
+
 .profile-img {
   width: 50px;
   height: 50px;
@@ -640,7 +674,7 @@ select {
   .dot {
     width: 0.7em;
     height: 0.7em;
-    margin: 5 0 30px -10px;
+    margin: 5px 0px 30px -10px;
   }
 
   /* TABLET GRID STYLES */
@@ -792,34 +826,7 @@ select {
 
 @media (min-width: 1024px) {
   .notifications {
-    top: 55px;
     right: 220px;
-    z-index: 2;
-    position: absolute;
-    display: none;
-  }
-
-  .box {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px;
-    height: 85px;
-    width: 180px;
-    border: 1px solid #D7D8FB;
-    background-color: #FBFBFB;
-  }
-
-  .close-notification {
-    padding: 10px;
-    background-color: #7477C8;
-    color: #FFF;
-    border-radius: 10px;
-  }
-
-  .close-notification:hover {
-    cursor: pointer;
-    opacity: 0.6;
   }
 
   .profile-img {

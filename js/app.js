@@ -130,6 +130,7 @@ function auto(input, arr) {
     }
 
   });
+  // close autocomplete when user clicks outside search box
     function close(element) {
       let x = document.getElementsByClassName('autocomplete-list');
       for (let i = 0; i < x.length; i++) {
@@ -144,3 +145,59 @@ function auto(input, arr) {
   }
 
 auto(document.getElementById('user_search'), users);
+
+// local storage
+
+const emailCheckBox = document.getElementById('email_notif');
+const profileCheckBox = document.getElementById('pub_profile');
+const timezoneSelect = document.getElementById('timezone');
+const saveBtn = document.getElementById('save_btn');
+const cancelBtn = document.getElementById('cancel_btn');
+
+function supportsLocalStorage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch(e) {
+    return false;
+  }
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem('emailCheckBox', emailCheckBox.checked);
+  localStorage.setItem('profileCheckBox', profileCheckBox.checked);
+  localStorage.setItem('timezone', timezone.selectedIndex);
+  location.reload();
+}
+
+function clearLocalStorage() {
+  localStorage.clear();
+  location.reload();
+}
+
+function rememberSaved() {
+  let emailSettings = JSON.parse(localStorage.getItem('emailCheckBox'));
+  emailCheckBox.checked = emailSettings;
+  let profileSettings = JSON.parse(localStorage.getItem('profileCheckBox'));
+  profileCheckBox.checked = profileSettings;
+  let savedTimezone = localStorage.getItem('timezone');
+  timezone.selectedIndex = savedTimezone;
+}
+
+saveBtn.addEventListener('click', function(e) {
+  if (e.target.type === 'submit') {
+    saveToLocalStorage();
+    e.preventDefault();
+  }
+});
+
+cancelBtn.addEventListener('click', function(e) {
+  if (e.target.type === 'reset') {
+    clearLocalStorage();
+  }
+});
+
+window.onload = function() {
+  if (supportsLocalStorage) {
+    rememberSaved();
+  }
+}
