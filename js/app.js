@@ -104,7 +104,6 @@ function auto(input, arr) {
   input.addEventListener('keydown', function(e) {
     let x = document.getElementById(this.id + 'auto-list');
     if ($search.val() == '') {
-      // currentInput--;
       const allAutoDivs = $('.list');
       allAutoDivs.each(function() {
         $(this).remove();
@@ -156,7 +155,7 @@ const cancelBtn = document.getElementById('cancel_btn');
 
 function supportsLocalStorage() {
   try {
-    return 'localStorage' in window && window['localStorage'] !== null;
+    return 'localStorage' in window && window.localStorage !== null;
   } catch(e) {
     return false;
   }
@@ -200,4 +199,4 @@ window.onload = function() {
   if (supportsLocalStorage) {
     rememberSaved();
   }
-}
+};
