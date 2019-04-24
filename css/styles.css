@@ -72,7 +72,7 @@ textarea {
 
 .notifications {
   top: 55px;
-  right: 310px;
+  right: 120px;
   z-index: 2;
   position: absolute;
   display: none;
@@ -707,23 +707,8 @@ select {
     padding: 5px;
   }
 
-  .social {
-    grid-column: 1 / 3;
-  }
-
-  .new-members {
-    grid-column: 1 / 3;
-  }
-
-  .activity {
-    grid-column: 1 / 3;
-  }
-
-  .message {
-    grid-column: 1 / 3;
-  }
-
-  .settings {
+  .social, .new-members, .activity,
+  .message, .settings {
     grid-column: 1 / 3;
   }
 
